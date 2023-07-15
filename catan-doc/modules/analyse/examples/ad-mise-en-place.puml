@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Commencer une partie catan;
+if(Verifier NBJoueurs) then (NbJoueurs = 3 || 4)
+    :Donner une fiche coût construction à chaque joueur;
+    :Donner les pièces villes, routes, colonies à chaque joueur;
+    if(Placer 2 routes et 2 colonies) then (yes)
+        :Donner cartes ressources;
+        Stop;
+    else(no)
+
+    endif
+else(NbJoueurs < 3 || NbJoueurs > 4)
+    Stop;
+endif
+
+@enduml

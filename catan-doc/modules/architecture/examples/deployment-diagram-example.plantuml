@@ -1,0 +1,10 @@
+@startuml
+node "Game Server" as server {
+    artifact "Server.jar" as Server
+
+}
+node "Game Player" as player {
+    folder appClient
+}
+server "[1]" -- "[4]" player : <<protocol>> Web Sockets
+@enduml

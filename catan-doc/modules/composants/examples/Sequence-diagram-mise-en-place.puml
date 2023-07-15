@@ -1,0 +1,34 @@
+@startuml
+
+autonumber
+
+box "Client"
+participant UIHome
+participant ClientWebSocket
+participant RestClient
+end box
+
+box "Server"
+participant RestServer
+participant Lobbymanager
+participant ServerWebSocket
+end box
+
+UIHome -> RestClient: StartNewGame
+RestClient -> RestServer: StartNewGame
+RestServer -> Lobbymanager: VerifyLobbyList
+Lobbymanager -> Lobbymanager: ValidateLobby
+
+Lobbymanager -> ServerWebSocket: CreateSessionBetweenLobbyListElements
+ServerWebSocket <- RestServer: CreateSessionResponse
+RestServer <-  ClientWebSocket : CreateSessionResponse
+ClientWebSocket <- UIHome: WebSocketSessionResponse
+UIHome -> ClientWebSocket: 
+ClientWebSocket -> RestClient:
+RestClient -> ServerWebSocket: CreateGameBoard
+
+
+
+
+
+@enduml

@@ -1,0 +1,117 @@
+@startuml
+'https://plantuml.com/class-diagram
+enum Couleur{
+ROUGE
+BLANC
+BLEU
+ORANGE
+}
+enum Resource{
+MINERAI
+LAINE
+ARGILE
+BLE
+BOIS
+}
+
+enum Terrain{
+DESERT
+FORET
+MONTAGNE
+CHAMPS
+PRE
+COLONIE
+}
+
+enum TypeCarteDev{
+PROGRES
+CHEVALIER
+POINTVICTOIRE
+}
+
+class Partie{
+}
+class Joueur {
+couleur : Couleur
+
+}
+class Plateau {
+}
+class Carte {
+}
+class CarteDeveloppement{
+type : TypeCarteDev
+}
+class CarteRessource{
+ressource : Ressource
+}
+
+
+class Tuile{
+terrain : Terrain
+numero : int
+voleur : boolean
+}
+
+class Croisement{
+}
+class Chemin{
+}
+class Port{
+}
+class PortSpecialise{
+ressource : Resource
+}
+
+class Construction{
+}
+class Route{
+}
+class Ville{
+}
+class Colonie{
+}
+
+
+
+
+
+Carte <|-- CarteRessource
+Carte <|-- CarteDeveloppement
+
+Construction <|-- Colonie
+Construction <|-- Ville
+
+
+Port <|-- PortSpecialise
+
+Partie "1" *-- "3..4" Joueur
+Partie "1" *-- "1" Plateau
+Partie "1" *-- "0..1" Carte
+Partie "1" *-- "0..n" Construction
+
+
+Plateau "1" *-- "19" Tuile
+
+Tuile "1" --> "6" Croisement
+Tuile "1" --> "6" Chemin
+
+Croisement "1" --> "0..1" Construction
+Croisement "1" --> "0..1" Port
+
+Chemin "1" --> "0..1" Route
+
+Joueur "1" -- "0..n" Carte
+Joueur "1" -- "0..n" Construction
+Joueur "1" -- "0..n" Route
+
+
+
+
+
+
+
+
+
+
+@enduml

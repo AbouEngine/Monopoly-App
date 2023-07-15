@@ -1,0 +1,15 @@
+@startuml
+
+node Client {
+    artifact WebClient
+}
+node Server {
+    artifact GameServer
+}
+actor Player
+Player -r-> WebClient
+
+WebClient -left- Server : WebSockets
+
+
+@enduml

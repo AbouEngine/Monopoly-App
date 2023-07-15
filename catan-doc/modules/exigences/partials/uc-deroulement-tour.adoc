@@ -1,0 +1,154 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 3
+
+| Cas d'utilisation	
+| _Déroulement d'un tour_
+
+
+
+| Objectif contextuel
+| _Le joueur actif effectue les actions qu'il peut et doit faire
+pendant son tour_
+
+| Niveau
+| _Primary_
+
+| Condition de succès
+| _Le tour prend fin._
+
+| Condition d'échec
+| _Le serveur rencontre une panne et la partie prend fin._
+
+| Acteurs principaux:
+a|* _Le joueur actif_
+* _Serveur_
+
+
+| Acteurs secondaires
+|_Les autres joueurs_
+
+| Événement déclencheur
+| _Le tour du joueur précédent est terminé._
+
+
+| Priorité
+| _TOP_
+
+| Fréquence
+| _Plusieurs fois par partie_
+
+| Pré-conditions 
+a| 
+- _Le tour du joueur précédent est terminé._
+- _La partie n'est pas encore terminée._
+
+| Post-conditions
+a| 
+- _Le tour prend fin._
+
+| Scénario nominal
+a|
+. _Le serveur lance le compte à rebours de tour._
+. _Le joueur envoie la requête lancer de dés._
+. _Le serveur calcule un nombre aléatoire entre 2 et 12._
+. _Le joueur actif peut faire du commerce_
+.. _Le joueur actif peut envoyer plusieurs requêtes pour faire
+un échange avec les autres joueurs._
+.. _Les autres joueur peuvent envoyer des requêtes pour des
+contreproposition._
+... _Le joueur actif désigne le/les joueurs avec qui il
+souhaite échanger._
+... _Le serveur effectue l'échanges 1:1._
+.. _Le joueur actif peut choisir de faire l'échange avec
+la banque._
+... _Le serveur effectue l'échanges 4:1._
+. _Le joueur actif peut envoyer plusieurs requêtes pour
+construire_
+.. _Le joueur actif construit une route sur un chemin
+disponible_
+... _Le serveur créé la route_
+... _Le serveur soustrait une resource argile et une bois
+au joueur._
+.. _Le serveur soustrait une route des pièces du joueur_
+.. _Le joueur actif construit une colonie sur une intersection
+libre et connecté à une de ses routes et dont aucune
+intersection voisine ne contient de colonie/ville_
+... _Le serveur créé la colonie_
+... _Le serveur soustrait une ressource argile, bois, minerai,
+laine au joueur._
+... _Le serveur soustrait une colonie aux pièces du joueur._
+... _Le serveur ajoute 1 pt de victoire au joueur._
+.. _Le joueur construit une ville sur une de ses colonies_
+... _Le serveur créé la route_
+... _Le serveur soustrait 3 ressources minerai 2 blé au joueur_
+... _Le serveur ajoute une colonie à ses pièces et lui en
+soustrait une ville_
+... _Le serveur ajoute 1 pt de victoire au joueur_
+. _Le joueur actif peut envoyer une requête pour jouer une
+carte développement achetée lors d'un tour antérieur._
+.. _Le serveur attribue la dernière carte de la pile des cartes
+développement au joueur._
+.. _Le serveur lui soustrait une ressource laine, une
+resource minerai et une ressource blé._
+. _Le joueur actif annonce la fin de son tour_
+
+
+
+| Extensions	
+a| 
+* _2a. Le score obtenu est différent de 7:_
+** _2a1. Le serveur attribue aux joueurs les ressources
+correspondant au terrain numéroté par le score obtenu et
+qui avoisine leurs colonies/villes_
+* _2b. Le score obtenu est égal à 7:_
+** _2b1. Le serveur lance un compte à rebours pour défausser
+les ressources._
+** _2b2. Les joueurs ayant plus de 7 ressources en défaussent
+la moitié._
+** _2b3. Le compte à rebours prend fin._
+** _2b4. Le serveur défausse aléatoirement la moitié des ressources
+des joueurs qui en ont plus de 7._
+** _2b5. Le serveur donne au joueur actif la possibilité de déplacer
+le voleur._
+** _2b6. Le joueur actif déplace le voleur._
+** _2b7. Le serveur donne la possibilité au joueur actif
+de désigner un des joueurs ayant une colonie/ville avoisinant
+la tuile du voleur._
+** _2b8. Le serveur attribue aléatoirement une des
+ressources du joueur désigné au joueur actif :_
+* _2c. Le score obtenu correspond au numéro de la tuile sur
+laquelle est posé le voleur._
+** _2c1. Le serveur n'attribue pas les ressources correspondant
+à la tuile sur laquelle est posé le voleur._
+* _4f-a. Le joueur actif possède une colonie/ville près d'un
+port:_
+** _4f-a1. Le serveur effectue l'échange 3:1._
+* _4f-b. Le joueur actif possède un port spécialisé et veut
+faire l'échange avec:_
+** _4f-b1. Le serveur effectue l'échange 2:1 contre la
+ressource spéfique au port spécialisé._
+* _7a. Le joueur a un total de point d'au moins 10 pts:_
+** _7a1. Le serveur annonce que le joueur est vainqueur et met
+fin à la partie._
+
+| Alternatives
+a|* A chaque fois que le serveur exécute une requête ou
+une opération, les mises à jour qui en résultent sont
+envoyées à tous les joueurs de la partie.
+* _Le joueur actif peut à tout moment de son tour jouer une carte
+développement_
+
+
+
+|===
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+@startuml
+
+
+autonumber
+
+box "Client"
+participant UIHome
+participant ClientWebSocket
+participant RestClient
+end box
+
+box "Server"
+participant RestServer
+participant Lobbymanager
+participant ServerWebSocket
+end box
+
+UIHome -> RestClient: playNewGame
+RestClient -> RestServer: playNewGame
+RestServer -> Lobbymanager: joinLobby
+Lobbymanager -> Lobbymanager: searchLobby
+alt all lobbies are full
+Lobbymanager -> Lobbymanager :createNewLobby
+else
+end
+RestServer <-- Lobbymanager: gameConnection
+RestClient <-- RestServer: gameConnectionn
+ClientWebSocket <-- RestClient: initClientWS
+ClientWebSocket -> ClientWebSocket: init
+ClientWebSocket -> ServerWebSocket: initServerWS
+ServerWebSocket -> ServerWebSocket: init
+Lobbymanager <- ServerWebSocket: joinLobby
+Lobbymanager --> ServerWebSocket: lobbyJoined
+ClientWebSocket <-- ServerWebSocket: lobbyJoined
+UIHome <-- ClientWebSocket: lobbyJoined
+UIHome -> UIHome: displayLobby
+
+
+
+
+
+@enduml

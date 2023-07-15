@@ -1,0 +1,85 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 1
+
+| Cas d'utilisation	
+| _Mise en place et préparation_
+
+
+
+| Objectif contextuel
+| _Mise en place du plateau de jeu et distribution
+des pièces de jeu et cartes resources._
+
+| Portée	
+| _Le jeu de Catan._
+
+
+| Condition de succès
+a| * _Le plateau a été mis en place._
+* _Tous les joueurs ont choisi une couleur._
+* _Tous les joueurs ont placé 2 routes et 2 colonies._
+* _Tous les joueurs ont reçu leurs cartes ressource._
+
+| Condition d'échec
+|_Des pièces de jeu, cartes ou tuiles du plateau sont manquantes._
+
+
+| Acteurs principaux:
+| _Tous les joueurs._
+
+| Acteurs secondaires
+a|* _Plateau._
+* _Pièces de jeu_
+* _Cartes_
+
+
+| Événement déclencheur
+| _Les joueurs décident de jouer une partie de catan._
+
+
+| Fréquence
+| _Une fois au début de chaque partie._
+
+| Pré-conditions 
+| _Le nombre de joueurs est de 3 ou 4._
+
+
+
+
+| Scénario nominal
+a|
+. _Les joueurs construisent le plateau en plaçant les 19 tuiles
+de terrain._
+. _Les joueurs placent les jetons numérotés sur les tuiles de façon
+aléatoire (un jeton par tuile et pas de jeton pour la tuile desert
+sur laquelle est placé le voleur)._
+. _Les joueurs reçoivent leurs pièces de jeu
+(5 colonies, 4 villes et 15 routes chacun)._
+. _Les joueurs placent les cartes resources, triées en 5 piles,
+dans le compartiment dédié._
+. _Les joueurs placent les cartes developpement mélangées dans le
+compartiment dédié._
+. _Les joueurs placent chacun, à tour de rôle, une première route
+et une première colonie sur une intersection libre (chaque route
+est conectée à une colonie)._
+. _Les joueurs placent chacun, à tour de rôle de façon inverse,
+une seconde route et une seconde colonie._
+. _Les joueurs reçoivent les cartes ressources correspondant aux
+terrains avoisiant leur colonie marquée par une étoile._
+. _Le joueur qui a posé sa colonie en premier commence la
+partie (dans le sense des aiguilles d'une montre)._
+
+
+
+|===
+
+
+
+
+
+

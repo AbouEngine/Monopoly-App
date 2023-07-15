@@ -1,0 +1,30 @@
+@startuml
+node Client1 {
+    artifact AngularApp as front1
+}
+
+node Client2 {
+    artifact AngularApp as front2
+}
+
+node Client3 {
+    artifact AngularApp as front3
+}
+
+node Client4 {
+    artifact AngularApp as front4
+}
+
+
+node Server {
+    artifact SpringBootApp
+}
+
+
+
+Server -up- Client1: HTTP / WebSocket
+Server -down- Client2 : HTTP / WebSocket
+Server -left- Client3 : HTTP / WebSocket
+Server -right- Client4 : HTTP / WebSocket
+
+@enduml

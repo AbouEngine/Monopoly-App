@@ -1,0 +1,84 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 3
+
+| Cas d'utilisation	
+| _Initialiser une partie_
+
+
+| Objectif contextuel
+| _Mise en place et initialisation de la partie_
+
+| Niveau
+| _Primary_
+
+| Condition de succès
+| _La partie est initilisée et le premier tour peut commencer_
+
+| Condition d'échec
+| _Plus de deux joueurs quittent la partie._
+
+| Acteurs principaux:
+a|* _Joueurs_
+* _Serveur_
+
+
+| Événement déclencheur
+a|* _Le lobby  comporte 4 joueurs_
+* _Le lobby comporte 3 joueurs et le compte à rebours
+d'attente se termine._
+
+
+| Priorité
+| _TOP_
+
+| Fréquence
+| _A chaque lancement de partie_
+
+| Pré-conditions
+a|* _Le lobby de la partie comporte 4 joueurs_
+* _Le lobby comporte 3 joueurs et le compte à rebours
+d'attente se termine._
+
+| Post-conditions
+| La partie est initilisée
+
+
+| Scénario nominal
+a|
+. _Le serveur attribue aléatoirement une couleur à chaque
+joueur_
+. _Le serveur répartit les tuiles terrain aléatoirement sur
+le plateau._
+. _Le serveur attribue aléatoirement les numéros des tuiles_
+. _Le serveur créer la pile de carte développement dans
+un ordre aléatoire_
+. _Le serveur établit un ordre de jeu aléatoire_
+. _Le serveur attribue à tour de rôle la possibilité
+aux joueurs de poser une première route et colonie sur un
+chemin ou une intersection disponible._
+. _Les joueurs envoient au serveur, à tour de rôle, les
+requêtes pour poser leur première colonie et route_
+. _Le serveur attribue à tour de rôle, dans l'ordre inverse,
+la possibilité de poser une deuxième colonie et route._
+. _Les joueurs envoient au serveur, à tour de rôle, les
+requêtes pour poser leur deuxième colonie et route_
+. _Le serveur attribue les ressources correspondant aux
+colonies que chaque joueur possède_
+
+| Alternatives
+a| A chaque fois que le serveur exécute une requêtes ou
+une opérations, les mise à jour qui en résultent sont
+envoyées à tous les joueurs de la partie.
+
+|===
+
+
+
+
+
+

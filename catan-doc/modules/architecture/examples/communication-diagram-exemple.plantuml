@@ -1,0 +1,8 @@
+@startuml
+Client -> Server: requête HTTP
+Server -> Client: réponse HTTP
+
+Client <-> Server: WebSocket Session
+Client --> Server: Fermeture de la session
+
+@enduml

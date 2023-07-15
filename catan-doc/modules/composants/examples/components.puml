@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+
+package "Server" {
+
+  [GameInitialiser] -d- "initGame"
+  "initGame" <-d- [LobbyManager]
+
+  [GameManager] -l- "startGame"
+   "startGame" <-l- [GameInitialiser]
+
+  [ServerWebSocket] -l- "serverOperation"
+  "serverOperation" <-l- [GameManager]
+
+  [GameManager] -u- "playerActions"
+  "playerActions" <-- [ServerWebSocket]
+
+  [LobbyManager] -r- "createAndJoinLobby"
+  "createAndJoinLobby" <-r- [RestServer]
+
+  [LobbyManager] -u- "joinLobby"
+  "joinLobby" <-- [RestServer]
+
+
+
+}
+
+[RestServer] -r- "playGame"
+[ServerWebSocket] -r- "interaction"
+
+package "Client"{
+
+    "interaction" <-- [ClientWebSocket]
+    [ClientWebSocket] -l-> "playerAction"
+    [ClientWebSocket] -- "serverOperations"
+
+    "playerAction" -- [UI Game]
+    "serverOperations" <-- [UI Game]
+
+
+   "playGame" <-r- [RestClient]
+
+   [UI Home] -l-> "playNewGame"
+   "playNewGame" -- [RestClient]
+
+
+
+
+
+}
+
+
+
+
+
+
+@enduml

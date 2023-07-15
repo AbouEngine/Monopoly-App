@@ -1,0 +1,12 @@
+@startuml
+class "Joueur"
+class "Plateau"
+class "Carte"
+class "Terrain"
+class "Pion"
+
+"Joueur" "3..4" --> "1" "Plateau"
+"Joueur" "*" --> "1" "Carte"
+"Plateau" "*" *-- "Terrain"
+"Terrain" "*" o-- "*" "Pion"
+@enduml

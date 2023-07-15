@@ -1,0 +1,115 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 1
+
+| Cas d'utilisation	
+| _Déroulement d'un tour_
+
+| Alias
+| _à compléter_
+
+| Objectif contextuel
+| _Le joueur veut jouer son tour de jeu_
+
+| Portée	
+| _à compléter_
+
+| Niveau
+| _à compléter_
+
+| Condition de succès
+| _Le joueur lance les dés_
+
+| Condition d'échec
+| _le joueur ne lance pas les dés_
+
+| Acteurs principaux:
+| _Le joueur actif_
+
+| Acteurs secondaires
+| _Les autres joueurs_
+
+| Événement déclencheur
+| _Le joueur veut faire un tour_
+
+
+| Priorité
+| _à compléter_
+
+| Fréquence
+| _à compléter_
+
+| Pré-conditions 
+a| 
+- _le joueur précédent finit son tour_
+- _On connait le joueur courant_
+
+| Post-conditions
+a| 
+- _Le joueur courant joue le tour_
+
+
+| Scénario nominal
+a|
+. _Le joueur actif lance les dés_
+. _les joueurs reçoivent les cartes ressources_
+. _le joueur accède è la phase de commerce
+. _le joueur accède è la phase de construction
+
+
+
+
+
+
+
+| Extensions	
+a|
+.<le joueur actif fait 7 aux dés>: les joueurs ne reçoivent pas de cartes ressources, les joueurs avec cartes ressources >= 7 défaussent la moitié de leurs cartes ressources,
+le joueur actif déplace le pion voleurs, le joueur actif vole une carte ressource à un joueur près du pion voleur, le joueur actif poursuit le tour normal.
+| Alternatives	
+a|
+. <choix faire du commerce intérieur> le joueur échange une carte choisie contre la carte d'un autre joueur
+. <choix  faire du commerce maritime sans port> le joueur échange 4 resources contre une avec la banque
+. <choix  faire du commerce maritime avec port> le joueur échange 3 resources contre une avec la banque
+. <choix faire commerce maritime avec port spécialisé> le joueur échange 2 resources indiquées contre 1 avec la banque
+. <choix construire route>: le joueur actif construit une nouvelle route
+. <choix construire colonie>: le joueur actif construit une nouvelle colonie
+. <choix construire ville>: le joueur actif construit une nouvelle ville
+. <choix achéter une carte developpement>: le joueur actif achète une carte developpement
+. <choix achéter une carte developpement>: le joueur actif joue une carte developpement
+
+| Cas d'utilisation supérieur
+| _Mise en place_
+
+| Cas d'utilisation subordonnés 
+| _à compléter_
+// _optional, depending on tools, links to sub.use cases_
+
+| Objectif de performance
+| _à compléter_
+
+| Problèmes ouverts	
+a|
+- _à compléter_
+- _à compléter_
+
+| Échéancier	
+| _à compléter_
+
+| Contraintes
+| _à compléter_
+
+| Annexes
+| _à compléter_
+
+|===
+
+
+
+
+
+

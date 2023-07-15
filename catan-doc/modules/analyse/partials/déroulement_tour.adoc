@@ -1,0 +1,148 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 2
+
+| Cas d'utilisation	
+| _Déroulement d'un tour_
+
+
+| Objectif contextuel
+| _Le joueur actif effectue les actions qu'il peut ou doit
+ faire pendant son tour._
+
+| Portée	
+| _Le jeu de catan._
+
+
+| Condition de succès
+| _Le joueur actif annonce la fin de son tour après avoir effectué
+les actions obligatoires pour son tour._
+
+| Condition d'échec
+| _le joueur actif a quitté la partie._
+
+| Acteurs principaux:
+| _Le joueur actif._
+
+| Acteurs secondaires
+a|* _Pièces de jeu_
+* _Dés_
+* _Cartes_
+
+| Événement déclencheur
+| _Fin de la mise en place ou fin du tour du joueur précédent_
+
+
+| Fréquence
+| _Plusieurs fois par partie_
+
+| Pré-conditions 
+a| 
+* _Le joueur précédent finit son tour_
+*  _La partie n'est pas encore terminée ( le joueur précédent
+n'est pas le vainquer)._
+
+| Scénario nominal
+a|
+. _Le joueur actif lance les dés._
+. _Le joueur actif peut choisir de faire du commerce_
+.. _Le joueur actif peut échanger des cartes resources avec les
+autres joueurs, il peut négocier et faire des contrepropositions
+(pendant son tour le joueur actif est le seul à pouvoir faire des
+échanges)._
+.. _Le joueur actif peut échanger 4 cartes ressources identiques
+contre une  de son choix avec la banque._
+. _Le joueur actif peut choisir de construire_
+.. _Le joueur actif peut construire des routes (argile + bois).
+Une route doit être connectée à une ville,colonie
+ou route de même couleur._
+.. _Le joueur actif peut construire des colonies (argile + bois +
+laine + blé). Une colonie doit être construite sur une intersection
+ dont aucune intersection voisine n'en contient (même pour la
+même couleur) et doit être connectée à une route de même couleur._
+.. _Le joueur actif peut construire une ville(x3 minerai + x2 blé)
+sur une colonie(la colonie est remise dans la réserve et remplacée
+par la ville)._
+. _Le joueur actif peut acheter une carte de développement(minerai
++ laine + blé) celle-ci peut être utilisée pour les tours
+ultérieurs._
+. _Le joueur actif peut choisir de jouer une carte
+développement achetée lors d'un tour antérieur._
+. _Le joueur actif calcul son total de points de victoire._
+
+
+
+
+
+
+
+| Extensions	
+a|* _1a. Le score obtenu est différent de 7 :_
+** _1a1. Tous les joueurs reçoivent les cartes ressources
+correspondant aux tuiles numérotées par la somme des deux
+dés et qui sont voisine à leur colonie/ville(une colonie
+produit une seule resource et une ville en produit deux)._
+* _1b. Le score obtenu est égal à 7 :_
+** _1b1. Tous les joueurs possédant plus de 7 cartes
+ressources doivent en défausser la moitié(division entière)._
+** _1b2. Le joueur actif déplace le voleur sur une tuile
+terrain._
+** _1b3. Le joueur actif vole une carte ressource à un
+autre joueur qui possède une ville/colonie voisine à la tuile
+terrain où se trouve le voleur(les cartes ressources sont
+face cachée)._
+* _1c. Le score obtenu correspond au numéro d'une tuile terrain
+sur laquelle est posé le voleur :_
+** _1c1. Les joueurs possédant des villes/colonie vosine à
+cette tuile n'en reçoivent pas de ressources._
+* _2b-a. Le joueur actif a une colonie/ville près d'un port :_
+** _2b-a1. Le joueur actif peut échanger 3 cartes ressources
+identiques contre une de son choix._
+* _2b-b. Le joueur actif a une colonie/ville près d'un port
+spécialisé :_
+** _2b-b1. Le joueur actif peut échanger 2 cartes ressources
+identiques contre une correspondant au type de resources du port
+spécialisé._
+* _3a-a. Le joueur actif possède la suite de route la plus
+longue d'au moins 5 routes (sans compter les dérivations) :_
+** _3a-a1. Le joueur actif reçoit la fiche "Route la plus
+longue" valant deux pts de victoire._
+* _5a. Le joueur actif joue une carte chevalier :_
+** _5a1. Le joueur actif déplace le voleur_
+** _5a2. Le joueur actif vole une carte ressource
+(identique à l'extension 1b3)._
+* _5b. Le joueur actif est le premier à posséder 3 cartes
+chevalier :_
+** _5b1. Il reçoit la carte "Armée la plus puissante" qui
+vaut 2 pts de victoire._
+* _5c. Le joueur actif joue une carte progrès :_
+** _5c1. Le joueur actif réalise les instructions mentionnées
+par la carte._
+** _5c2._ Le joueur actif défausse la carte jouée.
+* _5d. Le joueur actif joue ses cartes points de victoire
+et possède un total d'au moins 10pts :_
+** _5d1. Le joueur actif est déclaré vainquer et la partie
+prend fin._
+* _6a. Le joueur actif a un total de pts de victoire
+inférieur à 10._
+** _6a1. Le joueur actif annonce la fin de son tour._
+* _6b. Le joueur actif a un total de pts de victoire d'au
+moins 10._
+** _6b1. Le joueur actif est déclaré vainqueur et la partie
+prend fin._
+
+| Alternatives
+a| * Le joueur actif peut jouer une carte développement à tout
+moment de son tour, même avant le lancé de dés.
+
+|===
+
+
+
+
+
+

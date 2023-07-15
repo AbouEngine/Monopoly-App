@@ -1,0 +1,107 @@
+= Conception détaillée
+
+== Travail à réaliser
+
+// ainsi que de décrire comment vous répondez aux différentes exigences non-fonctionnelles.
+
+Objectif::
+Spécification détaillée des composants: leur structure (diagramme de classes de conception), ainsi que le comportement de chaque opération fournie par le composants. Le comportement peut-être décrit en utilisant les diagrammes d'activité, d'interaction, les machines d'état, ainsi que OCL.
+
+Moyens::
+Appliquez les concepts vus en cours: design patterns, principes GRASP, bonnes pratiques, etc.
+
+
+
+
+== Réponses aux exigences non-fonctionnelles
+
+[NOTE]
+====
+Expliquez dans cette section les répondes aux différentes exigences non-fonctionnelles spécifiées.
+====
+
+=== Concurrence
+
+NOTE: TODO!
+
+=== Performance
+
+NOTE: TODO!
+
+=== Interopérabilité
+
+NOTE: TODO!
+
+
+=== Portabilité
+
+NOTE: TODO!
+
+=== Sécurité
+
+NOTE: TODO!
+
+==== Exigence de sécurité
+
+Notre système doit être sécurisé, même si nous ne manipulons pas des données sensibles. Pour cela nous devons vérifier l'identité de l'utilisateur.
+
+
+N'ayant pas à nous occuper de l'authentification de l'utilisateur nous admettons que le système s'occupant de cela est correct et lui-même sécurisé. Nous admettons également que, quelle que soit la plateforme utilisée (web, logiciel, application) le service d'authentification sera le même pour tous.
+
+=== Maintenanbilité
+
+NOTE: TODO!
+
+==== Maintenabilité
+
+NOTE: TODO!
+
+=== Interface utilisateur
+
+NOTE: TODO!
+
+=== Interface logicielle
+
+NOTE: TODO!
+
+=== Interface ou protocoles de communication
+
+NOTE: TODO!
+
+=== Correction
+
+NOTE: TODO!
+
+== Patrons logiciels utilisés
+
+NOTE: Décrivez dans cette partie les patrons logiciels utilisés pour mettre en œuvre l'application.
+
+
+=== Patron de conception "A"
+
+NOTE: TODO!
+
+=== Patron architectural "B"
+
+NOTE: TODO!
+
+== Choix techniques - Distribution des processus
+
+[NOTE]
+====
+Explicitez les différents choix techniques et les réponses technologiques aux différentes contraintes que le système implique.
+====
+
+Pour cela nous allons donc vous présenter l'environnement général de développement puis énoncer les 4 contraintes que nous avons déterminées de notre logiciel.
+
+Nous avons fais le choix d'utiliser comme environnement de travail l'IDE eclipse.
+Pour la raison que nous connaissons tous très bien cette environnement, ce qui nous permet d'avoir tous le même environnement de développement.
+
+Également, cette IDE permet la gestion d'un projet maven ce qui nous sera parfaitement adapté.
+
+Voici les 4 contraintes que nous avons déterminées :
+
+. L'interface graphique.
+. La communication vers la base de données.
+. La communication entre les machines.
+. La sécurité.

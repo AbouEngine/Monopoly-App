@@ -1,0 +1,103 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+split
+:Le joueur actif lance les dés;
+if(Score) is(!=7) then
+ if(Score) is(num terrain voleur) then
+ : Le terrain ne produit pas de resources;
+ endif
+ :Les joueurs reçoivent leurs ressources;
+else(7)
+:Les joueurs défaussent la moitié
+            de leurs ressources;
+:Le joueur actif déplace le voleur sur
+                         un terrain;
+:Le joueur actif vole une ressource;
+endif
+
+if(Commerce) is(oui) then
+    repeat
+        switch (Type)
+              case(interne)
+                  :Le joueur échange avec
+                  les autres joueurs(1:1);
+              case(avec port)
+                  :Le joueur échange(4:1)
+                           avec la banque;
+              case( sans port)
+                  :Le joueur échange(3:1)
+                            avec la banque;
+              case( port spécialisé)
+              :Le joueur échange(2:1)
+              avec la banque contre
+              la resource spéfique;
+
+        endswitch
+    repeat while
+else(non)
+endif
+
+if(Construire) is(oui) then
+    repeat
+        switch(Type)
+            case(route)
+                :Le joueur construt une route;
+                if(La plus longue et >=5) is(oui) then
+                   :Le joueur reçoit la fiche
+                     "Route la plus longue";
+                else(non)
+                endif
+            case(colonie)
+                :Le joueur construit une colonie;
+            case(ville)
+                :Le joueur actif contruit une ville;
+
+        endswitch
+    repeat while
+else(non)
+endif
+
+if(Acheter caret développement) is(oui) then
+:Le joueur achète une carte développement;
+else(non)
+endif
+
+
+
+split again
+
+    if(Jouer carte développement) is(oui) then
+        switch(carte)
+            case(Progrès)
+                :Le joueur joue une carte progrès;
+            case(pt de victoire)
+                :Le joueur joue ses carte pt de victoire;
+            case(chevalier)
+                :Le joueur joue une carte chevalier;
+                if(Possède 3 chevaliers) is(oui) then
+                    :Le joueur reçoit la fiche
+                     "Armée la plus puissante";
+                else(non)
+                endif
+        endswitch
+    else(non)
+    endif
+end split
+
+
+:Le joueur calcul son total de point;
+if(Total) is(>=10) then
+:Le joueur est déclaré vainquer;
+:Fin de partie;
+end;
+else(10<)
+:Fin de tour;
+stop;
+endif
+
+
+
+
+@enduml

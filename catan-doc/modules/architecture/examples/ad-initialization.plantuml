@@ -1,0 +1,10 @@
+@startuml
+start
+fork
+:Delete old cache files;
+:Create new cache folder;
+fork again
+:Delete log file;
+end fork
+end
+@enduml

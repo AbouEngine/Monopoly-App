@@ -1,0 +1,117 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 1
+
+| Cas d'utilisation	
+| _Mise en place et préparation du système_
+
+| Alias
+| _à compléter_
+
+| Objectif contextuel
+| _fournir un jeu fonctionnel aux joueurs_
+
+| Portée	
+| _ _
+
+| Niveau
+| _Résumé_
+
+| Condition de succès
+| _présence d'au moins 2 joueurs._
+ _Serveur disponible._
+
+| Condition d'échec
+| _Présence de moins de 2 joueurs_
+ _Serveur indisponible._
+
+
+| Acteurs principaux:
+| _joueurs et serveur_
+
+| Acteurs secondaires
+|
+
+| Événement déclencheur
+| _demande du joueur au serveur pour se connecter_
+
+
+| Priorité
+|
+
+| Fréquence
+| _à compléter_
+
+| Pré-conditions 
+a| 
+- _au moins 3 joueurs veulent jouer_
+- _serveur opérationnel_
+
+| Post-conditions
+a| 
+- _les joueurs sont dans une partie_
+- __
+- _à compléter_
+
+
+| Scénario nominal
+a|
+. _les joueurs demandent la connexion au serveur_
+. _le serveur ajoute les joueurs dans une partie_
+. _le serveur informe les joueurs que la partie commmence si il y au moins 3 joueurs_
+. _les joueurs sont informés grâce à une fenêtre graphique que la partie commence_
+. _le serveur donne 2 routes et 2 colonies aux joueurs_
+. _les joueurs placent chacun 2 routes et 2 colonies sur le plateau_
+. _le serveur trie et distribue les cartes ressources aux joueurs_
+. _Les joueurs visualisent les cartes ressources triées dans le compartiment dédié_
+. _Le serveur mélange et place les cartes développements_
+
+
+
+| Extensions	
+a| 
+. _à compléter_
+. _à compléter_
+
+| Alternatives	
+a| 
+. _à compléter_
+. _à compléter_
+
+| Cas d'utilisation supérieur
+| _à compléter_
+
+| Cas d'utilisation subordonnés 
+| _à compléter_
+// _optional, depending on tools, links to sub.use cases_
+
+| Objectif de performance
+| _1000 Parties en parallèle_
+
+| Problèmes ouverts	
+a|
+- _à compléter_
+- _à compléter_
+
+| Échéancier	
+| _à compléter_
+
+| Contraintes
+| _le serveur n'est pas disponible_
+
+ _les joueurs n'ont pas internet_
+
+| Annexes
+| _à compléter_
+
+|===
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+@startuml
+node GameServer
+node Client1
+node Client2
+node Client3
+node Client4
+
+GameServer -- Client1 : WebSocket
+GameServer -- Client2 : WebSocket
+GameServer -- Client3 : WebSocket
+GameServer -- Client4 : WebSocket
+
+@enduml

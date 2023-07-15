@@ -1,0 +1,193 @@
+:project: Les colons de Catane
+= Architecture
+
+== Introduction
+
+[NOTE]
+====
+Le but de ce chapitre est de spécifier l'architecture d'une famille de produits,
+dont le projet {project} en fait partie.
+
+Il s'agit ici de choix génériques, qui peuvent s'appliquer à plusieurs projets.
+====
+
+====
+Nous avons proposé une architecture Client / Server pour ce projet {project}. Cela dit, nous aurons une partie server qui va communiquer avec la partie Client en utilisant les protocoles HTTP, WebSocket
+====
+
+.Dagramme de communication Client Server
+[plantuml]
+----
+include::example$communication-diagram-exemple.plantuml[]
+----
+== Vue physique
+
+[NOTE]
+====
+La vue physique a pour but de décrire comment devrait être déployé le logiciel selon des nœuds logiques.
+Ainsi que de définir comment ou plutôt par quel moyen les différents nœuds vont communiquer entre eux.
+Et enfin le dernier but de cette vue est de donner les différentes contraintes de déploiement,
+comme quelles librairies sont utilisées, quels sont les besoins matériels.
+====
+
+[NOTE]
+====
+Pour décrire la vue physique, vous allez vous appuyer sur deux diagrammes{nbsp}:
+
+. Le diagramme de déploiement, qui ci doit expliquer la plupart des points énoncés précédemment.
+. Le diagramme de déploiement au niveau des instances, qui respecte les spécifications du diagramme précédent,
+pour montrer comment seront réparties les instances de ceci.
+====
+
+.Diagramme de déploiement (niveau spécification)
+[plantuml]
+----
+include::example$deployment-diagram-example.plantuml[]
+----
+
+====
+D'une vue physique, nous avons la partie Serveur de notre logiciel {project} qui, sera developpé en java 11, un jar de notre app Java sera déployé sur un serveur physique.
+Ensuite nous allons deployer la partie Client qui sera développée en Angular 15. 
+====
+
+[NOTE]
+====
+Décrivez les nœuds logiques, ainsi que les artefacts qui peuvent être déployés sur ces nœuds.
+Vous pouvez profiter de ce diagramme pour expliquer le protocole de communication entre les nœuds.
+====
+
+.Diagramme de déploiement (niveau instance)
+[plantuml]
+----
+include::example$deployment-diagram-instance.plantuml[]
+----
+
+====
+Logiquement nous allons avoir comme exemple d'instance, une instance du notre server et 4 instances de l'application web cliente qui communiqueront avec ce dernier avec des messages webSocket.
+====
+
+[NOTE]
+====
+Expliquez ce diagramme, si les artefacts déployés sont différents, vous pouvez le montrer.
+====
+
+== Vue de la fiabilité
+
+[NOTE]
+====
+Dans cette partie, vous allez présenter les différents choix architecturaux pour assurer la fiabilité du système.
+
+Vous devez aussi présenter les prévisions de fonctionnement dans des conditions limite{nbsp}:
+* Comment le système est initialisé{nbsp}?
+* Comment le système est arrêté{nbsp}?
+* Comment sont gérés les failles et le redémarrage du système{nbsp}?
+====
+
+[TIP]
+====
+Utilisez des diagrammes d'activité UML pour décrire l'initialisation et l'arrêt du système.
+====
+
+.Initialisation du système
+[plantuml]
+----
+include::example$ad-initialization.plantuml[]
+----
+
+== Vue du développement
+
+[NOTE]
+====
+Décrivez ici l'organisation du code source.
+Plutôt que décrire les paquetages Java ou Typescript, décrivez plutôt les artefacts Maven et les modules Node.js.
+====
+
+
+[TIP]
+====
+Utilisez un https://www.uml-diagrams.org/package-diagrams-overview.html[Diagramme de paquetages]
+pour décrire l'organisation du code source.
+====
+
+.Organisation des modules
+[plantuml]
+----
+include::example$pd-example.plantuml[]
+----
+
+
+
+
+== Vue logique
+
+[NOTE]
+====
+L'objectif de la vue logique est de décrire les différents composants qui jouent un rôle commun
+dans les différents projets qui respectent une même architecture.
+====
+
+
+== Vue des processus
+
+[NOTE]
+====
+TODO!
+====
+
+
+== Vue technique : traduction de UML en code source
+
+[NOTE]
+====
+Expliquez, dans cette section, l'ensemble de règles que vous utiliserez par la suite pour traduire les
+diagrammes de conception UML en code source Java et TypeScript.
+====
+
+
+
+=== Règles de traduction des types de base
+
+.Traduction des types de base
+|===
+| UML | Java | TypeScript
+
+| Integer
+| Integer
+| Integer
+
+| Boolean
+| Boolean
+| Boolean
+
+| String
+| String
+| String
+
+| Real
+| float
+| float
+
+|===
+
+=== Conventions de codage
+
+NOTE: Expliquez ici les conventions de codage, Java et TypeScript, que les développeurs devront respecter.
+
+=== Règles de traduction des composants
+
+NOTE: Explique ici les règles que vous allez utiliser pour mettre en œuvre les composants UML.
+
+=== Règles de traduction des classes
+
+NOTE: Explique ici les règles que vous allez utiliser pour mettre en œuvre les classes UML.
+
+=== Règles de traduction des associations
+
+NOTE: Expliquez ici les règles qui vous devrez  suivre pour mettre en œuvre les associations,
+agrégations composites et agrégations partagées.
+
+
+== Conclusion
+
+NOTE: Ajoutez une conclusion à la section "architecture" de votre documentation.
+

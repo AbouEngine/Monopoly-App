@@ -1,0 +1,110 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 1
+
+| Cas d'utilisation	
+| _Mise en place et préparation_
+
+| Alias
+| _à compléter_
+
+| Objectif contextuel
+| _Le joueur veut commencer une nouvelle partie du jeu_
+
+| Portée	
+| _à compléter_
+
+| Niveau
+| _à compléter_
+
+| Condition de succès
+| _Tous les joueurs ont une fiche coût construction, tous les joueurs plaçent 2 routes et 2 colonies, tous les joueurs reçoivent une carte ressource_
+
+| Condition d'échec
+| _Un joueur n'a pas reçu une fiche coût construction, ne place pas 2 routes, ne place pas 2 colonies, le joueur ne reçoit pas une carte ressource_
+
+| Acteurs principaux:
+| _Tous les joueurs_
+
+| Acteurs secondaires
+| _à compléter_
+
+| Événement déclencheur
+| _Les joueurs veulent jouer une partie de jeu_
+
+
+| Priorité
+| _à compléter_
+
+| Fréquence
+| _à compléter_
+
+| Pré-conditions 
+a| 
+- _le plateau de jeu est formé_
+- le nombre de joueurs est de 3 ou 4
+- _Tous les joueurs ont 0 point_
+
+| Post-conditions
+a| 
+- _Tous les joueurs ont 2 points_
+- _Tous les joueurs placent 2 routes et 2 colonies_
+- _Tous les joueurs reçoivent une fiche coût construction_
+
+
+| Scénario nominal
+a|
+. _Les joueurs reçoivent une fiche coût construction_
+. _Les joueurs reçoivent leurs pièces (5 colonies, 4 villes, 15 routes chacun)_
+. _Les joueurs placent chacun 2 routes et 2 colonies_
+. _Les joueurs trient les cartes ressources en 5 piles_
+. _Les joueurs placent les cartes ressources triées dans le compartiment dédié_
+. _Les joueurs placent les cartes developpement mélangées_
+. _Les joueurs reçoivent les cartes ressources_
+
+
+| Extensions	
+a| 
+. _à compléter_
+. _à compléter_
+
+| Alternatives	
+a| 
+. _à compléter_
+. _à compléter_
+
+| Cas d'utilisation supérieur
+| _à compléter_
+
+| Cas d'utilisation subordonnés 
+| _à compléter_
+// _optional, depending on tools, links to sub.use cases_
+
+| Objectif de performance
+| _à compléter_
+
+| Problèmes ouverts	
+a|
+- _à compléter_
+- _à compléter_
+
+| Échéancier	
+| _à compléter_
+
+| Contraintes
+| _à compléter_
+
+| Annexes
+| _à compléter_
+
+|===
+
+
+
+
+
+

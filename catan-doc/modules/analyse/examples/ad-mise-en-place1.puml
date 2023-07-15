@@ -1,0 +1,34 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Lancer les dés;
+if(Numero des dés) then (7)
+    :Défausser carte ressource;
+    if(Nb Carte ressources) then(< = 7)
+
+    else(>7)
+        :Rétirer la moitié des cartes ressources;
+    endif
+else (else)
+    :Donner les cartes ressources;
+    :Faire du commerce;
+    if (condition?) is (yes) then
+      switch (choix?)
+          case(commerce interne)
+              : échanger carte ressource avec un autre joueur;
+          case(commerce maritime sans port)
+              : échanger 4:1 avec la banque;
+          case(commerce maritime avec port)
+              : échanger 3:1 avec la banque;
+          case (commerce maritime avec port spécialisé)
+              : échanger 2:1 avec la banque;
+
+          endswitch
+    else (no)
+      :construire;
+    endif
+
+endif
+
+@enduml

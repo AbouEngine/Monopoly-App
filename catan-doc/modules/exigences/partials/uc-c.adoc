@@ -1,0 +1,108 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 1
+
+| Cas d'utilisation	
+| _à compléter_
+
+| Alias
+| _à compléter_
+
+| Objectif contextuel
+| _à compléter_
+
+| Portée	
+| _à compléter_
+
+| Niveau
+| _à compléter_
+
+| Condition de succès
+| _à compléter_
+
+| Condition d'échec
+| _à compléter_
+
+| Acteurs principaux:
+| _à compléter_
+
+| Acteurs secondaires
+| _à compléter_
+
+| Événement déclencheur
+| _à compléter_
+
+
+| Priorité
+| _à compléter_
+
+| Fréquence
+| _à compléter_
+
+| Pré-conditions 
+a| 
+- _à compléter_
+- _à compléter_
+
+| Post-conditions
+a| 
+- _à compléter_
+- _à compléter_
+- _à compléter_
+
+
+| Scénario nominal
+a|
+. _à compléter_
+. _à compléter_
+. _à compléter_
+. _à compléter_
+. _à compléter_
+. _à compléter_
+
+
+| Extensions	
+a| 
+. _à compléter_
+. _à compléter_
+
+| Alternatives	
+a| 
+. _à compléter_
+. _à compléter_
+
+| Cas d'utilisation supérieur
+| _à compléter_
+
+| Cas d'utilisation subordonnés 
+| _à compléter_
+// _optional, depending on tools, links to sub.use cases_
+
+| Objectif de performance
+| _à compléter_
+
+| Problèmes ouverts	
+a|
+- _à compléter_
+- _à compléter_
+
+| Échéancier	
+| _à compléter_
+
+| Contraintes
+| _à compléter_
+
+| Annexes
+| _à compléter_
+
+|===
+
+
+
+
+
+

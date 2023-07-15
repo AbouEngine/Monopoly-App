@@ -1,0 +1,77 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 2
+
+| Cas d'utilisation	
+| _Rejoindre un lobby_
+
+
+| Objectif contextuel
+| _Ajouter le joueur à un lobby_
+
+| Niveau
+| _Primary_
+
+| Condition de succès
+| _Le joueur a réussi à rejoindre le lobby._
+
+| Condition d'échec
+| _Le joueur a été déconnecté_
+
+| Acteurs principaux:
+a|* _Joueur_
+* _Serveur_
+
+
+| Événement déclencheur
+| _Le joueur envoie une requête pour rejoindre une partie._
+
+
+| Priorité
+| _TOP_
+
+| Fréquence
+| _Chaque fois qu'un joueur souhaite rejoindre une partie._
+
+| Pré-conditions 
+a|
+- _Le joueur n'est pas dejà dans une partie ou lobby._
+
+| Post-conditions
+a| 
+- _Le joueur a rejoint le lobby._
+
+
+| Scénario nominal
+a|
+. _Le joueur demande à rejoindre un lobby._
+. _Le serveur recherche un lobby existant non complet._
+. _Le serveur ajoute le joueur au lobby._
+. _Le serveur affecte un pseudo automatique au joueur._
+. _Le joueur peut choisir son pseudo._
+
+
+
+| Extensions	
+a|* _2a. Touts les lobby existants sont complets :_
+** _2a1. Le serveur créer un nouveau lobby et y ajoute
+le joueur._
+* _4a. Le pseudo choisi est identique à celui d'un autre
+joueur dans le lobby :_
+** _4a1.Le serveur demande au joueur de chosir un nouveau
+pseudo_
+
+
+
+
+|===
+
+
+
+
+
+

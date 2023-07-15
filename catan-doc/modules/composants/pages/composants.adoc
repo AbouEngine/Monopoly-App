@@ -1,0 +1,45 @@
+= Spécification des composants
+
+== Travail à réaliser
+
+Objectif::
+Découpage de la solution en composants (ou sous-systèmes) et spécification des interfaces fournies et requises par ces composants
+
+Moyens::
+Utilisez des diagrammes d'interaction (séquence, communication) pour décrire l'échange de messages entre les composants pour en déduire leurs interfaces.
+
+
+== Diagramme de composants
+[plantuml]
+----
+include::example$components.puml[]
+----
+
+
+== Diagrammes de séquence
+Joindre le salon du jeu
+[plantuml]
+----
+include::example$sd-join-lobby.puml[]
+----
+
+== Diagrammes de séquence
+Creation d'une partie Catan
+[plantuml]
+----
+include::example$Sequence-diagram-mise-en-place.puml[]
+----
+
+== Diagrammes de séquence
+Contruction d'une route / ville
+[plantuml]
+----
+include::example$sd-join-lobby.puml[]
+----
+
+== Diagrammes de séquence
+Commerce entre 2 joueurs
+[plantuml]
+----
+include::example$Sequence-diagram-mise-en-place.puml[]
+----

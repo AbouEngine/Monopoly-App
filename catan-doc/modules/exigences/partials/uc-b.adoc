@@ -1,0 +1,125 @@
+
+[cols="30s,70n",options="header", frame=sides]
+|===
+| Item | Description
+
+| # 
+| 2
+
+| Cas d'utilisation	
+| _Déroulement d'un tour_
+
+| Alias
+| _à compléter_
+
+| Objectif contextuel
+| _Le joueur courant joue son tour dans une partie catan_
+
+| Portée	
+| _Le plateau du jeu_
+
+| Niveau
+| _Top_
+
+| Condition de succès
+| _Le joueur lance les dés_
+
+| Condition d'échec
+| _à compléter_
+
+| Acteurs principaux:
+| _Le joueur courant_
+
+| Acteurs secondaires
+| _Les autres joueurs de la partie_
+
+| Événement déclencheur
+| _Le click du joueur pour lancer les dés_
+
+
+| Priorité
+| __
+
+| Fréquence
+| __
+
+| Pré-conditions
+a|
+- _à compléter_
+- _à compléter_
+
+| Post-conditions
+a|
+- _à compléter_
+- _à compléter_
+- _à compléter_
+
+
+| Scénario nominal
+a|
+. _Le serveur indique le joueur courant (le joueur à qui le tour)_
+. _Le joueur courant clique sur un bouton pour lancer les dés_
+. _Le serveur affiche le resultat des dés_
+. _Le serveur spécifie les terrains de production_
+. _Le serveur spécifie les joueurs qui doivent recevoir les cartes ressources_
+. _le serveur donne les cartes ressources aux joueurs spécifiés_
+. _Le serveur affiche les choix de commercer ou de construire ou de passer le tour au joueur courant_
+. _Le joueur courant clique sur un choix commerce _
+. _Le joueur courant spécifie le commerce intérieur_
+. _Le serveur demande au joueur courant la (les) carte (s) ressources qu'il veut avoir_
+. _Le joueur courant spécifie la (les) carte (s) ressources qu'il veut avoir _
+. _Le serveur demande au joueur courant les cartes qu'il veut échanger _
+. _Le joueur courant spécifie la (les) carte (s) ressources qu'il veut échanger _
+. _Le serveur affiche les cartes ressources souhaitées du joueur courant aux autres joueurs_
+. _Le serveur affiche les cartes ressources à échanger du joueur courant aux autres joueurs_
+. _Le joueur interessé clique pour accepter l'échange du joueur courant_
+
+| Extensions
+a|
+. _<aucun joueur n'est interessé par l'échange du joueur courant> : le joueur courant renégocie l'échange de cartes ressources_
+. _<le joueur courant spécifie le commerce maritime> : le joueur courant spécifie 4 cartes ressources identiques au serveur,
+le joueur courant indique une carte ressource souhaitée, le serveur donne la carte ressource souhaitée au joueur courant_
+. _<Le joueur courant veut construire une route / une colonie>: Le serveur indique les cartes ressources necéssaires pour construire une route /une colonie au
+joueur courant, le joueur courant spécifie ses cartes ressources et l'emplacement de sa nouvelle route / nouvelle colonie, le serveur place une route pour le joueur courant_
+. _<Le joueur courant veut construire une ville>: Le joueur courant spécifie une colonie, le joueur courant indique les cartes ressources nécessaires pour construire une ville,
+le serveur remplace la colonie spécifiée par une nouvelle ville du joueur courant_
+. _<Le joueur courant passe le tour>: le joueur courant demande à passer son tour, le serveur spécifie le joueur suivant, le joueur courant finit le tour_
+
+| Alternatives
+a|
+. _<Le joueur courant a un port > : le courant spécifie 3 cartes ressources identiques, le joueur courant indique une carte ressource souhaitée,
+ le serveur donne la carte ressource souhaitée au joueur courant_
+. _<Le joueur courant a un port spécialisé > : le courant spécifie 2 cartes ressources identiques, le joueur courant indique une carte ressource souhaitée,
+    le serveur donne la carte ressource souhaitée au joueur courant_
+
+| Cas d'utilisation supérieur
+| _à compléter_
+
+| Cas d'utilisation subordonnés 
+| _à compléter_
+// _optional, depending on tools, links to sub.use cases_
+
+| Objectif de performance
+| _à compléter_
+
+| Problèmes ouverts	
+a|
+- _à compléter_
+- _à compléter_
+
+| Échéancier	
+| _à compléter_
+
+| Contraintes
+| _à compléter_
+
+| Annexes
+| _à compléter_
+
+|===
+
+
+
+
+
+

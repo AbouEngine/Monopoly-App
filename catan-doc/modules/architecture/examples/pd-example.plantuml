@@ -1,0 +1,6 @@
+@startuml
+package "web-server" as server {}
+package commons {}
+
+server ..> commons : <<import>>
+@enduml

@@ -1,0 +1,2 @@
+.Spécification des composants
+* xref:composants.adoc[]

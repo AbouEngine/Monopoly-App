@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Les joueurs placent les 19 tuiles terrain;
+:Les joueurs placent les jetons sur les tuiles terrain;
+:Les joueurs reçoivent leur pièces de jeu;
+:Les joueurs placent les cartes ressources et développement
+                         dans leur compartiments respectifs;
+
+:Joueur1 place une colonie et une route;
+:Joueur2 place une colonie et une route;
+:Joueur3 place une colonie et une route;
+if(Nombre de joeurs) then(4 Joueurs)
+:Joueur4 place une colonie et une route;
+:Joueur4 place une seconde colonie et une seconde route;
+else(3 Joueurs)
+endif
+
+:Joueur3 place une seconde colonie et une seconde route;
+:Joueur2 place une seconde colonie et une seconde route;
+:Joueur1 place une seconde colonie et une seconde route;
+
+:Joueur1 commence la partie;
+
+stop;
+
+
+
+
+@enduml
